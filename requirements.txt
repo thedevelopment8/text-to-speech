@@ -1,0 +1,27 @@
+# Core web app
+Flask>=3.0.0,<4
+python-dotenv>=1.0.0,<2
+Werkzeug>=3.0.0,<4
+
+# Audio I/O and numerics
+numpy>=1.24.0,<3
+soundfile>=0.12.1,<1
+
+# PyTorch — install the CUDA build separately on Windows/Linux if you have an NVIDIA GPU.
+# CPU-only example (Linux/Windows):
+#   pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+# CUDA 12.1 example:
+#   pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu121
+torch>=2.1.0
+torchaudio>=2.1.0
+
+# Hugging Face / Indic Parler-TTS stack
+transformers>=4.43.0,<5
+sentencepiece>=0.1.99
+protobuf>=4.25.0
+accelerate>=0.30.0
+huggingface_hub>=0.23.0
+
+# Official Parler-TTS package (required for ParlerTTSForConditionalGeneration)
+# Installed from GitHub — see README if pip fails on your platform.
+parler-tts @ git+https://github.com/huggingface/parler-tts.git
